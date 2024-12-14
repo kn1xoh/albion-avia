@@ -1,0 +1,169 @@
+:root {
+  --black: #252525;
+  --white: #f7f7f7;
+  --orange: #ff9900;
+  --blue: #0d58a6;
+  --blue-light: #689cd2;
+  --blue-dark: #04376c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-width: 300px;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.reset-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title-1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 38px;
+  color: var(--orange);
+}
+
+.title-2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.header {
+  padding: 20px 0;
+  background-color: var(--blue-dark);
+  color: var(--white);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  border: 3px solid var(--blue-light);
+  border-radius: 8px;
+  padding: 0 20px;
+}
+
+.header__logo {
+  font-size: 26px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.info__mail {
+  display: flex;
+  align-items: center;
+}
+
+.info__mail-icon {
+  width: 22px;
+  height: auto;
+}
+
+.info__link {
+  padding-left: 10px;
+}
+
+.main {
+  padding: 50px 0;
+}
+
+.main__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__title-div {
+  display: block;
+  font-size: 44px;
+  padding-bottom: 8px;
+}
+
+.main__img {
+  width: 800px;
+  height: auto;
+}
+
+.about {
+  background-color: var(--blue-light);
+  padding: 30px 0;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__title {
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.about__line {
+  position: relative;
+  width: 500px;
+  height: 2px;
+  background-color: var(--white);
+  margin-bottom: 40px;
+}
+
+.about__line:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  background-color: var(--orange);
+  border-radius: 10%;
+  border: 2px solid var(--white);
+  top: -15px;
+  left: 20px;
+}
+
+.about__text {
+  font-size: 20px;
+  line-height: 1.5em;
+  width: 650px;
+  color: var(--white);
+  text-indent: 1.5em;
+}
+
+.footer__inn {
+  display: grid;
+  grid-template-columns: 60px 100px;
+  gap: 5px;
+}
