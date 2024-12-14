@@ -19,6 +19,8 @@ body {
   background-color: var(--white);
   color: var(--black);
   font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4em;
 }
 
 .container {
@@ -36,12 +38,14 @@ body {
   font-weight: 600;
   font-size: 38px;
   color: var(--orange);
+  margin-bottom: 20px;
 }
 
 .title-2 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 30px;
+  line-height: 1.2em;
 }
 
 .header {
@@ -96,7 +100,7 @@ body {
 }
 
 .main {
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 .main__container {
@@ -108,7 +112,7 @@ body {
 .main__title-div {
   display: block;
   font-size: 44px;
-  padding-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .main__img {
@@ -119,6 +123,7 @@ body {
 .about {
   background-color: var(--blue-light);
   padding: 30px 0;
+  margin-bottom: 50px;
 }
 
 .about__container {
@@ -130,7 +135,6 @@ body {
 .about__title {
   color: var(--white);
   text-align: center;
-  padding-bottom: 20px;
 }
 
 .about__line {
@@ -156,14 +160,72 @@ body {
 
 .about__text {
   font-size: 20px;
-  line-height: 1.5em;
   width: 650px;
   color: var(--white);
   text-indent: 1.5em;
 }
 
+.footer {
+  padding-bottom: 30px;
+}
+
+.footer__container {
+  position: relative;
+}
+
+.footer__img-clouds {
+  position: absolute;
+  top: 60px;
+  right: -20px;
+  width: 550px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.footer__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer__text {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer__text-span {
+  color: var(--orange);
+  font-weight: 500;
+}
+
+.footer__text-span_name {
+  color: var(--orange);
+  font-size: 22px;
+  font-weight: 600;
+}
+
 .footer__inn {
   display: grid;
-  grid-template-columns: 60px 100px;
-  gap: 5px;
+  grid-template-columns: 60px 150px;
+  row-gap: 3px;
+  column-gap: 12px;
+  margin-bottom: 100px;
+}
+
+.footer__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.footer-info__block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-info__inner-title-span {
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 22px;
 }
