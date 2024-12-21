@@ -26,6 +26,7 @@ body {
 .container {
   max-width: 1240px;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 .reset-link {
@@ -82,7 +83,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .info__mail {
@@ -95,34 +96,81 @@ body {
   height: auto;
 }
 
-.info__link {
+.info__mail-link {
   padding-left: 10px;
 }
 
+.info__tel-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.info__tel-icon {
+  position: relative;
+  top: -1px;
+  width: 22px;
+  height: auto;
+}
+
+.info__tel-link {
+  padding-left: 6px;
+}
+
 .main {
-  padding: 80px 0;
+  background-image: url(img/clouds-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% 50%;
+  padding: 130px 0;
+  height: 85vh;
 }
 
 .main__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+}
+
+.main__content {
+  padding-top: 140px;
 }
 
 .main__title-div {
   display: block;
-  font-size: 44px;
-  margin-bottom: 15px;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.main__title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.btn-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  color: var(--white);
+  font-weight: 600;
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+  border-radius: 30px;
+  padding: 15px 20px;
 }
 
 .main__img {
-  width: 800px;
+  position: absolute;
+  top: 0;
+  right: -90px;
+  width: 900px;
   height: auto;
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--blue-light);
-  padding: 30px 0;
+  padding: 40px 0;
   margin-bottom: 50px;
 }
 
@@ -130,6 +178,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .about__title {
@@ -165,9 +214,9 @@ body {
   text-indent: 1.5em;
 }
 
-.footer {
+/* .footer {
   padding-bottom: 30px;
-}
+} */
 
 .footer__container {
   position: relative;
@@ -216,6 +265,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
+  padding: 20px 0;
 }
 
 .footer-info__block {
@@ -224,8 +274,34 @@ body {
   gap: 10px;
 }
 
+.footer-info__inner-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .footer-info__inner-title-span {
   color: var(--orange);
   font-weight: 600;
   font-size: 22px;
+}
+
+.footer-info__mail-icon {
+  width: 26px;
+  height: auto;
+}
+
+.footer-info__web-icon {
+  position: relative;
+  top: -2px;
+  width: 26px;
+  height: auto;
+}
+
+.footer-info__phone-icon {
+  position: relative;
+  top: -2px;
+  right: -2px;
+  width: 26px;
+  height: auto;
 }
