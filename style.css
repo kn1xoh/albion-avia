@@ -134,7 +134,10 @@ svg path {
   transition: stroke 0.2s ease;
 }
 
+/* Класс добавлен, так как в safari не отображается svg иконка, когда наложен hover сразу на 2 svg */
 .info__tel-icon--2 {
+  /* position: relative;
+  top: -1px; */
   width: 22px;
   height: 22px;
   stroke: var(--white);
@@ -147,12 +150,24 @@ svg path {
   transition: color 0.2s ease;
 }
 
-.info__tel-link:hover {
-  color: var(--orange);
+@media (hover: hover) {
+  .info__tel-link:hover {
+    color: var(--orange);
+  }
+
+  .info__tel-link:hover ~ .info__tel-icon {
+    stroke: var(--orange);
+  }
 }
 
-.info__tel-link:hover ~ .info__tel-icon {
-  stroke: var(--orange);
+@media (hover: none) {
+  .info__tel-link:active {
+    color: var(--orange);
+  }
+
+  .info__tel-link:active ~ .info__tel-icon {
+    stroke: var(--orange);
+  }
 }
 
 .main {
@@ -412,7 +427,8 @@ svg path {
   transform: translateX(100%);
   transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
   opacity: 0;
-  z-index: 90;
+  padding-top: 10px;
+  z-index: 50;
 }
 
 .burger__info {
@@ -529,6 +545,11 @@ svg path {
 
   .burger {
     display: flex;
+  }
+
+  .header {
+    width: 100%;
+    height: 92px;
   }
 
   .header__info {
