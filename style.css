@@ -21,6 +21,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4em;
+  -webkit-overflow-scrolling: touch;
 }
 
 svg path {
@@ -124,8 +125,8 @@ svg path {
 }
 
 .info__tel-icon {
-  position: relative;
-  top: -1px;
+  /* position: relative;
+  top: -1px; */
   width: 22px;
   height: 22px;
   stroke: var(--white);
@@ -404,6 +405,16 @@ svg path {
   transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
   opacity: 0;
   z-index: 90;
+}
+
+.burger__tel-icon {
+  /* position: relative;
+  top: -1px; */
+  width: 22px;
+  height: 22px;
+  stroke: var(--white);
+  order: -1;
+  transition: stroke 0.2s ease;
 }
 
 .burger__info {
