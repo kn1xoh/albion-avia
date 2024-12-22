@@ -7,6 +7,29 @@
   --blue-dark: #04376c;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,10 +66,10 @@ svg path {
 
 .title-1 {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 38px;
   color: var(--orange);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .title-2 {
@@ -111,12 +134,24 @@ svg path {
   transition: color 0.2s ease;
 }
 
-.info__mail-link:hover ~ .info__mail-icon {
-  stroke: var(--orange);
+@media (hover: hover) {
+  .info__mail-link:hover ~ .info__mail-icon {
+    stroke: var(--orange);
+  }
+
+  .info__mail-link:hover {
+    color: var(--orange);
+  }
 }
 
-.info__mail-link:hover {
-  color: var(--orange);
+@media (hover: none) {
+  .info__mail-link:active ~ .info__mail-icon {
+    stroke: var(--orange);
+  }
+
+  .info__mail-link:active {
+    color: var(--orange);
+  }
 }
 
 .info__tel-wrap {
@@ -125,19 +160,6 @@ svg path {
 }
 
 .info__tel-icon {
-  /* position: relative;
-  top: -1px; */
-  width: 22px;
-  height: 22px;
-  stroke: var(--white);
-  order: -1;
-  transition: stroke 0.2s ease;
-}
-
-/* Класс добавлен, так как в safari не отображается svg иконка, когда наложен hover сразу на 2 svg */
-.info__tel-icon--2 {
-  /* position: relative;
-  top: -1px; */
   width: 22px;
   height: 22px;
   stroke: var(--white);
@@ -171,7 +193,7 @@ svg path {
 }
 
 .main {
-  background-image: url(img/clouds-bg.png);
+  background-image: url(img/clouds-bg-minif.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 30% 50%;
@@ -191,7 +213,7 @@ svg path {
   display: block;
   font-size: 50px;
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--orange);
   margin-bottom: 20px;
 }
@@ -207,7 +229,7 @@ svg path {
   align-items: center;
   width: 220px;
   color: var(--white);
-  font-weight: 600;
+  font-weight: 700;
   background-color: var(--orange);
   border: 2px solid var(--orange);
   border-radius: 30px;
@@ -215,9 +237,18 @@ svg path {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.btn-contact:hover {
-  background-color: var(--white);
-  color: var(--orange);
+@media (hover: hover) {
+  .btn-contact:hover {
+    background-color: var(--white);
+    color: var(--orange);
+  }
+}
+
+@media (hover: none) {
+  .btn-contact:active {
+    background-color: var(--white);
+    color: var(--orange);
+  }
 }
 
 .main__img {
@@ -309,7 +340,7 @@ svg path {
 .footer__text-span_name {
   color: var(--orange);
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .footer__inn {
@@ -343,7 +374,7 @@ svg path {
 
 .footer-info__inner-title-span {
   color: var(--orange);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 22px;
 }
 
@@ -354,8 +385,8 @@ svg path {
 }
 
 .footer-info__web-icon {
-  position: relative;
-  top: -2px;
+  /* position: relative;
+  top: -2px; */
   width: 26px;
   height: 27px;
   stroke: var(--orange);
@@ -363,7 +394,7 @@ svg path {
 
 .footer-info__phone-icon {
   position: relative;
-  top: -2px;
+  /* top: -2px; */
   right: -2px;
   width: 26px;
   height: 26px;
@@ -371,11 +402,20 @@ svg path {
 }
 
 .footer-info__link {
+  color: inherit;
   transition: color 0.2s ease;
 }
 
-.footer-info__link:hover {
-  color: var(--orange);
+@media (hover: hover) {
+  .footer-info__link:hover {
+    color: var(--orange);
+  }
+}
+
+@media (hover: none) {
+  .footer-info__link:active {
+    color: var(--orange);
+  }
 }
 
 .up-arrow-link {
@@ -392,8 +432,16 @@ svg path {
   transition: stroke 0.1s ease;
 }
 
-.up-arrow-link:hover .up-arrow-icon {
-  stroke: var(--orange);
+@media (hover: hover) {
+  .up-arrow-link:hover .up-arrow-icon {
+    stroke: var(--orange);
+  }
+}
+
+@media (hover: hover) {
+  .up-arrow-link:active .up-arrow-icon {
+    stroke: var(--orange);
+  }
 }
 
 .burger {
@@ -425,7 +473,7 @@ svg path {
   background: var(--blue-dark);
   padding-left: 40px;
   transform: translateX(100%);
-  transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.2s ease, visibility 0.2s ease, opacity 0.2s ease;
   opacity: 0;
   padding-top: 10px;
   z-index: 50;
@@ -527,7 +575,7 @@ svg path {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -80%);
-    opacity: 0.15;
+    opacity: 0.12;
     z-index: -1;
   }
 }
@@ -584,10 +632,12 @@ svg path {
 
   .title-1 {
     font-size: 32px;
+    margin-bottom: 30px;
   }
 
   .about {
     padding: 40px 0 45px 0;
+    margin-bottom: 40px;
   }
 
   .about__line {
@@ -610,6 +660,11 @@ svg path {
 
   .footer__img-clouds {
     top: 45%;
+    left: 60%;
+  }
+
+  .footer__inn {
+    margin-bottom: 30px;
   }
 }
 
