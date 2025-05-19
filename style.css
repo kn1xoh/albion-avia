@@ -307,6 +307,55 @@ svg path {
   text-indent: 1.5em;
 }
 
+/* Блок поставки */
+.supply {
+  margin-bottom: 70px;
+}
+
+.supply__title {
+  text-align: center;
+}
+
+.supply__subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Таблица */
+.supply__table-wrap {
+  overflow-x: auto;
+  margin-bottom: 10px;
+}
+
+.supply__table {
+  min-width: 1160px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.supply__th,
+.supply__td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.supply__th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.supply__tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.supply__notation {
+  font-style: oblique;
+}
+
+/* Футер */
+
 .footer {
   padding-bottom: 30px;
 }
@@ -562,6 +611,10 @@ svg path {
 
   .main__img {
     position: static;
+  }
+
+  .supply {
+    margin-bottom: 50px;
   }
 
   .footer__container {
