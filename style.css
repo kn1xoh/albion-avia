@@ -194,11 +194,11 @@ svg path {
 }
 
 .main {
-  background-image: url(img/clouds-bg-minif.png);
+  background-image: url(img/clouds-bg-minif-reverse.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 30% 50%;
-  padding: 130px 0;
+  padding: 130px 0 0 0;
   height: 800px;
 }
 
@@ -208,6 +208,7 @@ svg path {
 
 .main__content {
   padding-top: 140px;
+  margin-bottom: 180px;
 }
 
 .main__title-div {
@@ -228,12 +229,12 @@ svg path {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 220px;
+  width: 210px;
   color: var(--white);
   font-weight: 700;
   background-color: var(--orange);
   border: 2px solid var(--orange);
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 15px 20px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -264,8 +265,7 @@ svg path {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--blue-light);
-  padding: 70px 0;
+  background-color: var(--white);
   margin-bottom: 50px;
 }
 
@@ -273,6 +273,9 @@ svg path {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--blue-light);
+  padding: 50px 50px;
+  border-radius: 20px;
 }
 
 .about__title {
@@ -468,11 +471,15 @@ svg path {
   }
 }
 
-.up-arrow-link {
+.arrow-link {
   display: block;
   margin: 0 auto;
   width: 50px;
   height: 50px;
+}
+
+.arrow-link--down {
+  rotate: 180deg;
 }
 
 .up-arrow-icon {
@@ -483,13 +490,13 @@ svg path {
 }
 
 @media (hover: hover) {
-  .up-arrow-link:hover .up-arrow-icon {
+  .arrow-link:hover .up-arrow-icon {
     stroke: var(--orange);
   }
 }
 
 @media (hover: hover) {
-  .up-arrow-link:active .up-arrow-icon {
+  .arrow-link:active .up-arrow-icon {
     stroke: var(--orange);
   }
 }
@@ -613,6 +620,14 @@ svg path {
     position: static;
   }
 
+  .arrow-link--down {
+    display: none;
+  }
+
+  .about__container {
+    padding: 40px 40px;
+  }
+
   .supply {
     margin-bottom: 50px;
   }
@@ -667,6 +682,10 @@ svg path {
     font-size: 22px;
   }
 
+  .main {
+    background-image: url(img/clouds-bg-minif.png);
+  }
+
   .main__content {
     padding-top: 50px;
   }
@@ -680,7 +699,7 @@ svg path {
   }
 
   .btn-contact {
-    width: 200px;
+    width: 180px;
     padding: 12px 16px;
   }
 
@@ -690,8 +709,13 @@ svg path {
   }
 
   .about {
-    padding: 40px 0 45px 0;
-    margin-bottom: 40px;
+    padding: 0 0 45px 0;
+    margin-bottom: 0;
+  }
+
+  .about__container {
+    width: 100%;
+    border-radius: 0;
   }
 
   .about__line {
@@ -706,6 +730,7 @@ svg path {
 
   .about__text {
     font-size: 18px;
+    text-align: center;
   }
 
   .footer__text-span_name {
@@ -755,9 +780,18 @@ svg path {
     width: 100%;
   }
 
+  .about__container {
+    padding: 20px 20px;
+  }
+
   .about__text {
     font-size: 16px;
     text-align: center;
+  }
+
+  .footer__text-span {
+    display: block;
+    width: 272px;
   }
 
   .footer__text-span_name {
